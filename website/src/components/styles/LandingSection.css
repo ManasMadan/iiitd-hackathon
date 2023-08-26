@@ -1,0 +1,68 @@
+section {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+section div.content-outer {
+  flex-grow: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  color: white;
+}
+section.active div.content {
+  opacity: 1;
+  bottom: 15vh;
+}
+section div.content {
+  position: absolute;
+  left: 50px;
+  max-width: 360px;
+  opacity: 0;
+  bottom: 10vh;
+  transition: all 0.5s linear;
+}
+section div.content h2 {
+  font-size: 48px;
+  margin: 0;
+}
+section div.content h3 {
+  margin: 0 0 10px;
+}
+section div.content a {
+  border: 2px solid #fff;
+  display: inline-block;
+  padding: 20px 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 30px;
+  position: relative;
+}
+section div.content a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+  background-color: white;
+}
+section div.content a:hover:before {
+  height: 100%;
+  top: initial;
+  bottom: 0;
+}
+section div.content a span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+section div.content a:hover span {
+  color: #000;
+}
